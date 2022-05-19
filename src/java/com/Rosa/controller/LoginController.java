@@ -13,11 +13,12 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html");  
+        //response.setContentType("text/html");  
         String user_email = request.getParameter("email");
         String password = request.getParameter("password");
-        PrintWriter out = response.getWriter();
-        out.write(user_email+ " "+password);
+        //PrintWriter out = response.getWriter();
+        //out.write(user_email+ " "+password);
+        
     }
     
     @Override
