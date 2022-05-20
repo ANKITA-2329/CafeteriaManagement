@@ -20,7 +20,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     </head>
     <body>
         <jsp:include page="index.html" />
-        <form action = "./LoginController" method = "post"><br><br>
+        <form action = "./CustLoginController" method = "post"><br><br>
             <div class ="container form-outline border">
             <div class = "container form-outline mb-4">
                 <h1>User Login</h1>
@@ -42,7 +42,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <a href = "register.jsp"> Register New User</a>
             </div> 
             <div class = "container text-center mb-2">
-                <a href = "emp.jsp"> Admin/Employee Login</a>
+                <a href = "adminEmpLogin.jsp"> Admin/Employee Login</a>
             </div> 
             </div>
         </form>
