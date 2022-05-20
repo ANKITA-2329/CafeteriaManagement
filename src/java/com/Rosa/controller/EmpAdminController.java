@@ -35,8 +35,8 @@ public class EmpAdminController extends HttpServlet {
         }
         else
         {
-           dispatcher = request.getRequestDispatcher("adminEmpLogin.jsp");
-           dispatcher.forward(request, response);
+            dispatcher = request.getRequestDispatcher("adminEmpLogin.jsp");
+            dispatcher.forward(request, response);
         }
     }
     public void destroy()
