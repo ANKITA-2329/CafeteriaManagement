@@ -5,7 +5,7 @@ public class Customer {
     private String c_name;
     private String c_emailid;
     private String address;
-    private String pin;
+    private int pin;
     private long mobile_no;
     private String c_password;
 
@@ -13,7 +13,7 @@ public class Customer {
     {
     }
 
-    public Customer(String c_name, String c_emailid, String address, String pin, long mobile_no, String c_password) {
+    public Customer(String c_name, String c_emailid, String address, int pin, long mobile_no, String c_password) {
         this.c_name = c_name;
         this.c_emailid = c_emailid;
         this.address = address;
@@ -54,11 +54,11 @@ public class Customer {
         this.address = address;
     }
 
-    public String getPin() {
+    public int getPin() {
         return pin;
     }
 
-    public void setPin(String pin) {
+    public void setPin(int pin) {
         this.pin = pin;
     }
 

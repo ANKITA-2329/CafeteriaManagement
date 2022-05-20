@@ -8,6 +8,10 @@
         <servlet-name>EmpAdminController</servlet-name>
         <servlet-class>com.Rosa.controller.EmpAdminController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CustomerRegisterController</servlet-name>
+        <servlet-class>com.Rosa.controller.CustomerRegisterController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>EmpAdminController</servlet-name>
         <url-pattern>/EmpAdminController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CustomerRegisterController</servlet-name>
+        <url-pattern>/CustomerRegisterController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
