@@ -47,8 +47,8 @@
                             Item
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Add Item</a>
-                            <a class="dropdown-item" href="#">Delete Item</a>
+                            <a class="dropdown-item" href="addItem.jsp">Add Item</a>
+                            <a class="dropdown-item" href="deleteItem.jsp">Delete Item</a>
                             <a class="dropdown-item" href="#">Update Item</a>
                         </div>
                     </li>

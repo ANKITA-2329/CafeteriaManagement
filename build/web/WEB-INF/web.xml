@@ -12,6 +12,14 @@
         <servlet-name>CustomerRegisterController</servlet-name>
         <servlet-class>com.Rosa.controller.CustomerRegisterController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ItemController</servlet-name>
+        <servlet-class>com.Rosa.controller.AddItemController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteItemController</servlet-name>
+        <servlet-class>com.Rosa.controller.DeleteItemController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>CustomerRegisterController</servlet-name>
         <url-pattern>/CustomerRegisterController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ItemController</servlet-name>
+        <url-pattern>/ItemController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteItemController</servlet-name>
+        <url-pattern>/DeleteItemController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
