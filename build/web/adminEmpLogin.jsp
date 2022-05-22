@@ -12,7 +12,7 @@
         <title>Employee Login</title>
     </head>
     <body>
-        <jsp:include page="index.html" /> 
+        <jsp:include page="mainNav.jsp" /> 
         <form action = "/Rosa/EmpAdminController" method = "POST"><br><br>
             <div class ="container form-outline border">
             <div class = "container form-outline mb-4">

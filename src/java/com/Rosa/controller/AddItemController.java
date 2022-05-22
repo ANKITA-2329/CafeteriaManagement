@@ -36,6 +36,7 @@ public class AddItemController extends HttpServlet {
         }
         else
         {
+            request.setAttribute("message", "Item was not added. Maybe already exist");
             dispatcher = request.getRequestDispatcher("addItem.jsp");
             dispatcher.forward(request, response);
         }   

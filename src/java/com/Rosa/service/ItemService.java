@@ -42,17 +42,31 @@ public class ItemService {
     {
         ArrayList <Item> item_details = new ArrayList <Item> ();
         String iname = item.getItem_name();
-        System.out.println(iname);
             stmt = con.createStatement();
             rs = stmt.executeQuery("Select * from item where item_name = '"+iname+"'");
-            System.out.println(rs.next());
             while(rs.next())
             {
-                System.out.println(rs.getInt(1));
+                Item i = new Item(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5), rs.getString(6));
+                item_details.add(i);
             } 
             return item_details;
     }
     public static int deleteItem(Item item) {
-        return 0;
+        String iname = item.getItem_name();
+        int result = 0;
+        try
+        {
+            String deleteCustomer = "delete from item where item_name = ?";
+            prepare = con.prepareStatement(deleteCustomer);
+            prepare.setString(1, iname);
+            result = prepare.executeUpdate();
+            System.out.println(result);
+        return result;
+        }
+        catch(SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return result;
     }
 }

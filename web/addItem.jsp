@@ -10,17 +10,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Add Food Item</title>
-        <script language="javascript"> 
-            function msg(){ 
-              <% String message = (String) request.getAttribute("message"); %>
-               var s="<%=message%>"; 
-               alert(s); 
-            } 
-        </script>
     </head>
     <body>
+        <% String message = (String) request.getAttribute("message"); %>
         <jsp:include page="adminPage.jsp" /><br><br>
-        
         <form action ="/Rosa/AddItemController" method ="post">
         <div class ="container form-outline border">
             <div class = "container form-outline mb-4">
@@ -63,5 +56,9 @@
         </div>
         </div>
         </form><br><br>
+        <script type="text/javascript">
+                var msg = "<%=message%>";
+                alert(msg);
+        </script>
     </body>
 </html>

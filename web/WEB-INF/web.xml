@@ -13,12 +13,20 @@
         <servlet-class>com.Rosa.controller.CustomerRegisterController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ItemController</servlet-name>
+        <servlet-name>AddItemController</servlet-name>
         <servlet-class>com.Rosa.controller.AddItemController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>DeleteItemController</servlet-name>
-        <servlet-class>com.Rosa.controller.DeleteItemController</servlet-class>
+        <servlet-name>SearchItemController</servlet-name>
+        <servlet-class>com.Rosa.controller.SearchItemController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteItemServlet</servlet-name>
+        <servlet-class>com.Rosa.controller.DeleteItemServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateItemServlet</servlet-name>
+        <servlet-class>com.Rosa.controller.UpdateItemServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
@@ -33,12 +41,20 @@
         <url-pattern>/CustomerRegisterController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ItemController</servlet-name>
-        <url-pattern>/ItemController</url-pattern>
+        <servlet-name>AddItemController</servlet-name>
+        <url-pattern>/AddItemController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>DeleteItemController</servlet-name>
-        <url-pattern>/DeleteItemController</url-pattern>
+        <servlet-name>SearchItemController</servlet-name>
+        <url-pattern>/SearchItemController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteItemServlet</servlet-name>
+        <url-pattern>/DeleteItemServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateItemServlet</servlet-name>
+        <url-pattern>/UpdateItemServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

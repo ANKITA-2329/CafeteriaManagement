@@ -13,6 +13,6 @@
     </head>
     
     <body id="backgroundimage" style="background-image: url(main.jpeg); background-repeat: no-repeat;">
-        <jsp:include page="index.html" />
+        <jsp:include page="mainNav.jsp" />
     </body>
 </html>
