@@ -19,28 +19,36 @@ public class SearchItemController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String source = request.getParameter("action");
-        String form = request.getParameter("update");
-        Item item = new Item();
-        String item_name = request.getParameter("iname");
-        item.setItem_name(item_name);
-        try {
-            List <Item> result = ItemService.searchItem(item);
-            request.setAttribute("result", result);
-        } catch (SQLException ex) {
-            Logger.getLogger(SearchItemController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        if(source.equals("delete"))
+        String useremail = (String) request.getSession(false).getAttribute("useremail");	
+	if(useremail == null) {
+            System.out.println("Session Expired....please login");
+            request.getRequestDispatcher("SessionExpired.jsp").forward(request, response);
+	}
+        else
         {
-            //request.setAttribute("message", "Record found successfully.");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("deleteItem.jsp");
-            dispatcher.forward(request, response);
-        }
-        if(source.equals("update"))
-        {
-            //request.setAttribute("message", "Record found successfully.");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("updateItem.jsp");
-            dispatcher.forward(request, response);
+            String source = request.getParameter("action");
+            String form = request.getParameter("update");
+            Item item = new Item();
+            String item_name = request.getParameter("iname");
+            item.setItem_name(item_name);
+            try {
+                List <Item> result = ItemService.searchItem(item);
+                request.setAttribute("result", result);
+            } catch (SQLException ex) {
+                Logger.getLogger(SearchItemController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            if(source.equals("delete"))
+            {
+                //request.setAttribute("message", "Record found successfully.");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("deleteItem.jsp");
+                dispatcher.forward(request, response);
+            }
+            if(source.equals("update"))
+            {
+                //request.setAttribute("message", "Record found successfully.");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("updateItem.jsp");
+                dispatcher.forward(request, response);
+            }
         }
     }
 

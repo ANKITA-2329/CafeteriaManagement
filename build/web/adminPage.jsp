@@ -58,7 +58,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Change Password</a>
                             <a class="dropdown-item" href="#">Update Profile</a>
-                            <a class="dropdown-item" href="#">Logout</a>
+                            <a class="dropdown-item" href="adminEmpLogin.jsp">Logout</a>
                         </div>
                     </li>
                 </ul>

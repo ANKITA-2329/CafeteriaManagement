@@ -9,6 +9,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 public class EmpAdminController extends HttpServlet {
 
@@ -24,12 +25,16 @@ public class EmpAdminController extends HttpServlet {
         Boolean result = EmpAdminService.verifyCredentials(email, password, type);
         if(result && type.equals("admin"))
         {
+            HttpSession session = request.getSession();
+            session.setAttribute("useremail", email);
             dispatcher = request.getRequestDispatcher("adminPage.jsp");
             dispatcher.forward(request, response);
         }
         
         else if(result && type.equals("employee"))
         {
+            HttpSession session = request.getSession();
+            session.setAttribute("useremail", email);
             dispatcher = request.getRequestDispatcher("empPage.jsp");
             dispatcher.forward(request, response);
         }

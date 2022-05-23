@@ -16,25 +16,32 @@ public class UpdateEmployeeController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Employee emp = new Employee();
-        int emp_id = Integer.parseInt(request.getParameter("eid"));
-        String workplace = request.getParameter("workplace");
-        emp.setEmp_id(emp_id);
-        emp.setWorkplace(workplace);
-        int result = EmployeeService.updateEmployee(emp);
-        if(result == 1)
-        {
-            request.setAttribute("message", "Record updated successfully.");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("updateEmployee.jsp");
-            dispatcher.forward(request, response);
-        }
+        String useremail = (String) request.getSession(false).getAttribute("useremail");	
+	if(useremail == null) {
+            System.out.println("Session Expired....please login");
+            request.getRequestDispatcher("SessionExpired.jsp").forward(request, response);
+	}
         else
         {
-            request.setAttribute("message", "Record was not updated.");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("updateEmployee.jsp");
-            dispatcher.forward(request, response);
+            Employee emp = new Employee();
+            int emp_id = Integer.parseInt(request.getParameter("eid"));
+            String workplace = request.getParameter("workplace");
+            emp.setEmp_id(emp_id);
+            emp.setWorkplace(workplace);
+            int result = EmployeeService.updateEmployee(emp);
+            if(result == 1)
+            {
+                request.setAttribute("message", "Record updated successfully.");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("updateEmployee.jsp");
+                dispatcher.forward(request, response);
+            }
+            else
+            {
+                request.setAttribute("message", "Record was not updated.");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("updateEmployee.jsp");
+                dispatcher.forward(request, response);
+            }
         }
-        
     }
 
 }

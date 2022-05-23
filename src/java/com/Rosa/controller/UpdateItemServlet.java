@@ -19,27 +19,34 @@ public class UpdateItemServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Item item = new Item();
-        String item_name = request.getParameter("iname");
-        int price = Integer.parseInt(request.getParameter("iprice"));
-        String status = request.getParameter("istatus");
-        item.setItem_name(item_name);
-        item.setPrice(price);
-        item.setStatus(status);
-        int result = ItemService.updateItem(item);
-        if(result == 1)
-        {
-            request.setAttribute("message", "Record updated successfully.");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("updateItem.jsp");
-            dispatcher.forward(request, response);
-        }
+        String useremail = (String) request.getSession(false).getAttribute("useremail");	
+	if(useremail == null) {
+            System.out.println("Session Expired....please login");
+            request.getRequestDispatcher("SessionExpired.jsp").forward(request, response);
+	}
         else
         {
-            request.setAttribute("message", "Record was not updated.");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("updateItem.jsp");
-            dispatcher.forward(request, response);
+            Item item = new Item();
+            String item_name = request.getParameter("iname");
+            int price = Integer.parseInt(request.getParameter("iprice"));
+            String status = request.getParameter("istatus");
+            item.setItem_name(item_name);
+            item.setPrice(price);
+            item.setStatus(status);
+            int result = ItemService.updateItem(item);
+            if(result == 1)
+            {
+                request.setAttribute("message", "Record updated successfully.");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("updateItem.jsp");
+                dispatcher.forward(request, response);
+            }
+            else
+            {
+                request.setAttribute("message", "Record was not updated.");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("updateItem.jsp");
+                dispatcher.forward(request, response);
+            }
         }
-        
     }
 
 }

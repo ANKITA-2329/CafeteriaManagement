@@ -60,6 +60,14 @@
         <servlet-name>UpdateAdminController</servlet-name>
         <servlet-class>com.Rosa.controller.UpdateAdminController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.Rosa.controller.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminEmpLogoutController</servlet-name>
+        <servlet-class>com.Rosa.controller.AdminEmpLogoutController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
@@ -119,6 +127,14 @@
     <servlet-mapping>
         <servlet-name>UpdateAdminController</servlet-name>
         <url-pattern>/UpdateAdminController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminEmpLogoutController</servlet-name>
+        <url-pattern>/AdminEmpLogoutController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -16,22 +16,30 @@ public class DeleteAdminServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        RequestDispatcher dispatcher;
-        int admin_id = Integer.parseInt(request.getParameter("aid"));
-        Admin admin = new Admin();
-        admin.setAdmin_id(admin_id);
-        int result = AdminService.deleteAdmin(admin);
-        if(result == 1)
-        {
-            request.setAttribute("message", "Record deleted successfully.");
-            dispatcher = request.getRequestDispatcher("deleteAdmin.jsp");
-            dispatcher.forward(request, response);
-        }
+        String useremail = (String) request.getSession(false).getAttribute("useremail");	
+	if(useremail == null) {
+            System.out.println("Session Expired....please login");
+            request.getRequestDispatcher("SessionExpired.jsp").forward(request, response);
+	}
         else
         {
-            request.setAttribute("message", "Record deletion was unsuccessfully.");
-            dispatcher = request.getRequestDispatcher("deleteAdmin.jsp");
-            dispatcher.forward(request, response);
+            RequestDispatcher dispatcher;
+            int admin_id = Integer.parseInt(request.getParameter("aid"));
+            Admin admin = new Admin();
+            admin.setAdmin_id(admin_id);
+            int result = AdminService.deleteAdmin(admin);
+            if(result == 1)
+            {
+                request.setAttribute("message", "Record deleted successfully.");
+                dispatcher = request.getRequestDispatcher("deleteAdmin.jsp");
+                dispatcher.forward(request, response);
+            }
+            else
+            {
+                request.setAttribute("message", "Record deletion was unsuccessfully.");
+                dispatcher = request.getRequestDispatcher("deleteAdmin.jsp");
+                dispatcher.forward(request, response);
+            }
         }
     }
 
