@@ -8,13 +8,21 @@
             <file>file:/E:/Final%20Year%20Project/Rosa/web/adminPage.jsp</file>
             <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/AddItemController.java</file>
             <file>file:/E:/Final%20Year%20Project/Rosa/web/addItem.jsp</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/DeleteItemServlet.java</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/web/updateItem.jsp</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/AddAdminController.java</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/web/empPage.jsp</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/SearchItemController.java</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/web/addAdmin.jsp</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/UpdateItemServlet.java</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/service/AdminService.java</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/SearchAdminController.java</file>
             <file>file:/E:/Final%20Year%20Project/Rosa/web/customerPage.jsp</file>
             <file>file:/E:/Final%20Year%20Project/Rosa/web/deleteItem.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/DeleteItemServlet.java</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/web/mainNav.jsp</file>
             <file>file:/E:/Final%20Year%20Project/Rosa/web/login.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/empPage.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/service/LoginService.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/SearchItemController.java</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/web/deleteAdmin.jsp</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/bean/Admin.java</file>
         </group>
     </open-files>
 </project-private>

@@ -5,13 +5,13 @@
 --%>
 <%@taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="com.Rosa.bean.Item"%>
+<%@page import="com.Rosa.bean.Admin"%>
 <%@page import = "java.util.*" %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Delete Item</title>
+        <title>Delete Admin</title>
         <style type = "text/css">
             table, th, td{
                 border: 1px solid black;
@@ -22,19 +22,19 @@
     <body>
         <% String message = (String) request.getAttribute("message"); %>
         <jsp:include page="adminPage.jsp"/>
-        <form name = "delete" id = "search" action ="./SearchItemController" method ="post"><br><br>
+        <form name = "delete" id = "search" action ="./SearchAdminController" method ="post"><br><br>
         <div class ="container form-outline border">
             <div class = "container form-outline mb-4">
-                <h1>Search Item</h1>
+                <h1>Search Admin</h1>
             </div>
             <input type = "hidden" name = "action" value = "delete">
             <div class = "container form-outline mb-4">
-                <% if(request.getParameter("iname") != null)
+                <% if(request.getParameter("aid") != null)
                 { %>
-                Item Name : <input type = "text" id = "name" class = "form-control" name = "iname" value="<%=request.getParameter("iname")%>" placeholder = "Enter item name" required/>
+                    Admin Id : <input type = "text" id = "aid" class = "form-control" name = "aid" value="<%=request.getParameter("aid")%>" placeholder = "Enter admin id" required/>
                     <% }
                     else
-                    { %> Item Name : <input type = "text" id = "name" class = "form-control" name = "iname" placeholder = "Enter item name" required/> <% }
+                    { %> Admin Id : <input type = "text" id = "aid" class = "form-control" name = "aid" placeholder = "Enter admin id" required/> <% }
                 %>
             </div>
             <div class = "container text-center ">
@@ -42,51 +42,43 @@
             </div>
         </div>
         </form>
-        <form action ="/Rosa/DeleteItemServlet" method ="post"><br>
+        <form action ="./DeleteAdminServlet" method ="post"><br>
             <div class ="container form-outline border"><br>
             <div class = "container form-outline mb-4">
-                <h1>Delete Item</h1>
+                <h1>Delete Admin</h1>
             </div>
-<!--            <input type = "hidden" name = "action" value = "delete">-->
+            <input type = "hidden" name = "action" value = "delete">
             <table style="margin-left:auto; margin-right:auto;" class="table table-striped">
                 <%
-                    ArrayList <Item> item = (ArrayList <Item>)request.getAttribute("result");
-                    if(item != null)
+                    ArrayList <Admin> admin = (ArrayList <Admin>)request.getAttribute("result");
+                    if(admin != null)
                     {
-                        for(Item i : item)
+                        for(Admin a : admin)
                         { %>
                         <tr>
-                            <th>Item_Title</th>
-                            <th>Item_Value</th>
+                            <th>Admin_Title</th>
+                            <th>Admin_Value</th>
                         </tr>
                         <tr>
-                            <td>Item_ID</td> 
-                            <td><input name = iid value = "<%=i.getItem_id()%>" readonly="readonly"></td>
+                            <td>Admin_ID</td> 
+                            <td><input name = aid value = "<%=a.getAdmin_id()%>" readonly="readonly"></td>
                         </tr>
                         <tr>
-                            <td>Item_Name</td>
-                            <td><input name = iname value = "<%=i.getItem_name()%>" readonly="readonly"></td>
+                            <td>Admin_Name</td>
+                            <td><input name = aname value = "<%=a.getAdmin_name()%>" readonly="readonly"></td>
                         </tr>
                         <tr>
-                            <td>Item_category</td>
-                            <td><input name = icategory value = "<%=i.getItem_category()%>" readonly="readonly"></td>
+                            <td>Admin Email Id</td>
+                            <td><input name = aemail value = "<%=a.getAdmin_emailid()%>" readonly="readonly"></td>
                         </tr>
                         <tr>
-                            <td>Item_Description</td>
-                            <td><input name = idesc value = "<%=i.getItem_description()%>" readonly="readonly"></td>
-                        </tr>
-                        <tr>
-                            <td>Price</td>
-                            <td><input name = iprice value = "<%=i.getPrice()%>" readonly="readonly"></td>
-                        </tr>
-                        <tr>
-                            <td>Status</td>
-                            <td><input name = istatus value = "<%=i.getStatus()%>" readonly="readonly"></td>
+                            <td>Mobile No</td>
+                            <td><input name = mobile value = "<%=a.getMobile_no()%>" readonly="readonly"></td>
                         </tr>
                     
             </table>
             <div class = "container text-center ">
-                <button type="submit" class="btn btn-primary btn-block mb-2" onclick = "msg()">Delete Item</button>
+                <button type="submit" class="btn btn-primary btn-block mb-2" onclick = "msg()">Delete Admin</button>
             </div>
                         <%
                         }

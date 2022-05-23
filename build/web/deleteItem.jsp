@@ -29,7 +29,13 @@
             </div>
             <input type = "hidden" name = "action" value = "delete">
             <div class = "container form-outline mb-4">
+                <% if(request.getParameter("iname") != null)
+                { %>
                 Item Name : <input type = "text" id = "name" class = "form-control" name = "iname" value="<%=request.getParameter("iname")%>" placeholder = "Enter item name" required/>
+                    <% }
+                    else
+                    { %> Item Name : <input type = "text" id = "name" class = "form-control" name = "iname" placeholder = "Enter item name" required/> <% }
+                %>
             </div>
             <div class = "container text-center ">
                 <button type="submit" class="btn btn-primary btn-block mb-2" >Get Details</button>
@@ -77,20 +83,26 @@
                             <td>Status</td>
                             <td><input name = istatus value = "<%=i.getStatus()%>" readonly="readonly"></td>
                         </tr>
-                    <%
-                        }
-                    }
-                %>
+                    
             </table>
             <div class = "container text-center ">
                 <button type="submit" class="btn btn-primary btn-block mb-2" onclick = "msg()">Delete Item</button>
             </div>
+                        <%
+                        }
+                    }
+                %>
         </div>
             
         </form><br>
-        <script type="text/javascript">
-                var msg = "<%=message%>";
-                alert(msg);
-        </script>
+        <%
+            if(message != null)
+            { %>
+                <script type="text/javascript">
+                    var msg = "<%=message%>";
+                    alert(msg);
+                </script>
+                <% }
+        %>
     </body>
 </html>

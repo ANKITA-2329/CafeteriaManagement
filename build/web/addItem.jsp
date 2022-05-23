@@ -56,9 +56,14 @@
         </div>
         </div>
         </form><br><br>
-        <script type="text/javascript">
-                var msg = "<%=message%>";
-                alert(msg);
-        </script>
+        <%
+            if(message != null)
+            { %>
+                <script type="text/javascript">
+                    var msg = "<%=message%>";
+                    alert(msg);
+                </script>
+                <% }
+        %>
     </body>
 </html>

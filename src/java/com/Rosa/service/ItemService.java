@@ -60,7 +60,25 @@ public class ItemService {
             prepare = con.prepareStatement(deleteCustomer);
             prepare.setString(1, iname);
             result = prepare.executeUpdate();
-            System.out.println(result);
+        return result;
+        }
+        catch(SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return result;
+    }
+    public static int updateItem(Item item)
+    {
+        String iname = item.getItem_name();
+        int result = 0;
+        try
+        {
+            String updateCustomer = "update item set price = ?, status = ? where item_name = '"+iname+"'";
+            prepare = con.prepareStatement(updateCustomer);
+            prepare.setInt(1, item.getPrice());
+            prepare.setString(2, item.getStatus());
+            result = prepare.executeUpdate();
         return result;
         }
         catch(SQLException e)

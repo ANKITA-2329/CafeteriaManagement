@@ -30,7 +30,13 @@
             </div>
             <input type = "hidden" name = "action" value = "update">
             <div class = "container form-outline mb-4">
+                <% if(request.getParameter("iname") != null)
+                { %>
                 Item Name : <input type = "text" id = "name" class = "form-control" name = "iname" value="<%=request.getParameter("iname")%>" placeholder = "Enter item name" required/>
+                    <% }
+                    else
+                    { %> Item Name : <input type = "text" id = "name" class = "form-control" name = "iname" placeholder = "Enter item name" required/> <% }
+                %>
             </div>
             <div class = "container text-center ">
                 <button type="submit" class="btn btn-primary btn-block mb-2" >Get Details</button>
@@ -78,14 +84,15 @@
                             <td>Status</td>
                             <td><input type = "text" name = istatus value = "<%=i.getStatus()%>"></td>
                         </tr>
-                    <%
-                        }
-                    }
-                %>
+                    
             </table>
             <div class = "container text-center ">
                 <button type="submit" class="btn btn-primary btn-block mb-2" onclick = "msg()">Update Item</button>
             </div>
+                        <%
+                        }
+                    }
+                %>
         </div>
             
         </form><br>

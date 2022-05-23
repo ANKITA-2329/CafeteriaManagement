@@ -1,7 +1,7 @@
 package com.Rosa.controller;
 
-import com.Rosa.bean.Item;
-import com.Rosa.service.ItemService;
+import com.Rosa.bean.Employee;
+import com.Rosa.service.EmployeeService;
 import jakarta.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,34 +9,29 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.sql.SQLException;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
-public class UpdateItemServlet extends HttpServlet {
+
+public class UpdateEmployeeController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Item item = new Item();
-        String item_name = request.getParameter("iname");
-        int price = Integer.parseInt(request.getParameter("iprice"));
-        String status = request.getParameter("istatus");
-        item.setItem_name(item_name);
-        item.setPrice(price);
-        item.setStatus(status);
-        int result = ItemService.updateItem(item);
+        Employee emp = new Employee();
+        int emp_id = Integer.parseInt(request.getParameter("eid"));
+        String workplace = request.getParameter("workplace");
+        emp.setEmp_id(emp_id);
+        emp.setWorkplace(workplace);
+        int result = EmployeeService.updateEmployee(emp);
         if(result == 1)
         {
             request.setAttribute("message", "Record updated successfully.");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("updateItem.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("updateEmployee.jsp");
             dispatcher.forward(request, response);
         }
         else
         {
             request.setAttribute("message", "Record was not updated.");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("updateItem.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("updateEmployee.jsp");
             dispatcher.forward(request, response);
         }
         

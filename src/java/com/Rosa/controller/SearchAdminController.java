@@ -1,7 +1,7 @@
 package com.Rosa.controller;
 
-import com.Rosa.bean.Item;
-import com.Rosa.service.ItemService;
+import com.Rosa.bean.Admin;
+import com.Rosa.service.AdminService;
 import jakarta.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,32 +14,32 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class SearchItemController extends HttpServlet {
+public class SearchAdminController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String source = request.getParameter("action");
-        String form = request.getParameter("update");
-        Item item = new Item();
-        String item_name = request.getParameter("iname");
-        item.setItem_name(item_name);
+        Admin admin = new Admin();
+        int admin_id = Integer.parseInt(request.getParameter("aid"));
+        System.out.println(admin_id);
+        admin.setAdmin_id(admin_id);
         try {
-            List <Item> result = ItemService.searchItem(item);
+            List <Admin> result = AdminService.searchAdmin(admin);
             request.setAttribute("result", result);
         } catch (SQLException ex) {
-            Logger.getLogger(SearchItemController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchAdminController.class.getName()).log(Level.SEVERE, null, ex);
         }
         if(source.equals("delete"))
         {
             //request.setAttribute("message", "Record found successfully.");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("deleteItem.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("deleteAdmin.jsp");
             dispatcher.forward(request, response);
         }
         if(source.equals("update"))
         {
             //request.setAttribute("message", "Record found successfully.");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("updateItem.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("updateAdmin.jsp");
             dispatcher.forward(request, response);
         }
     }

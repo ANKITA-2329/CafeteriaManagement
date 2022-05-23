@@ -28,6 +28,38 @@
         <servlet-name>UpdateItemServlet</servlet-name>
         <servlet-class>com.Rosa.controller.UpdateItemServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddAdminController</servlet-name>
+        <servlet-class>com.Rosa.controller.AddAdminController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchAdminController</servlet-name>
+        <servlet-class>com.Rosa.controller.SearchAdminController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteAdminServlet</servlet-name>
+        <servlet-class>com.Rosa.controller.DeleteAdminServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddEmployeeController</servlet-name>
+        <servlet-class>com.Rosa.controller.AddEmployeeController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteEmployeeController</servlet-name>
+        <servlet-class>com.Rosa.controller.DeleteEmployeeController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateEmployeeController</servlet-name>
+        <servlet-class>com.Rosa.controller.UpdateEmployeeController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchEmployeeController</servlet-name>
+        <servlet-class>com.Rosa.controller.SearchEmployeeController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateAdminController</servlet-name>
+        <servlet-class>com.Rosa.controller.UpdateAdminController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
@@ -55,6 +87,38 @@
     <servlet-mapping>
         <servlet-name>UpdateItemServlet</servlet-name>
         <url-pattern>/UpdateItemServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddAdminController</servlet-name>
+        <url-pattern>/AddAdminController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchAdminController</servlet-name>
+        <url-pattern>/SearchAdminController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteAdminServlet</servlet-name>
+        <url-pattern>/DeleteAdminServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddEmployeeController</servlet-name>
+        <url-pattern>/AddEmployeeController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteEmployeeController</servlet-name>
+        <url-pattern>/DeleteEmployeeController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateEmployeeController</servlet-name>
+        <url-pattern>/UpdateEmployeeController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchEmployeeController</servlet-name>
+        <url-pattern>/SearchEmployeeController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateAdminController</servlet-name>
+        <url-pattern>/UpdateAdminController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
