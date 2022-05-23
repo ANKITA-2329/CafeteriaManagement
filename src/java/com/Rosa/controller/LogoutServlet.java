@@ -13,12 +13,12 @@ public class LogoutServlet extends HttpServlet {
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		HttpSession session = request.getSession();
-		
+		HttpSession session = request.getSession(false);
+                System.out.println(session.getAttribute("useremail"));
 		if(session != null) {
-			session.removeAttribute("username");
+			session.removeAttribute("useremail");
 			session.invalidate();
-			request.getRequestDispatcher("LoginPage.jsp").forward(request, response);
+			request.getRequestDispatcher("adminEmpLogin.jsp").forward(request, response);
 		}
 		
 	}

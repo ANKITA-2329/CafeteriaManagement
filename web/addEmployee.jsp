@@ -13,7 +13,7 @@
     </head>
     <body>
         <% String message = (String) request.getAttribute("message"); %>
-        <jsp:include page="adminPage.jsp" /><br><br>
+        <jsp:include page="adminNav.jsp" /><br><br>
         <form action ="./AddEmployeeController" method ="post">
         <div class ="container form-outline border">
             <div class = "container form-outline mb-4">
