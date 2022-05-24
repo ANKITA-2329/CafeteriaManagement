@@ -15,7 +15,7 @@ public class AddAdminController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String useremail = (String) request.getSession(false).getAttribute("useremail");
+        String useremail = (String) request.getSession().getAttribute("useremail");
         System.out.println(useremail);
 	if(useremail == null) {
             System.out.println("Session Expired....please login");

@@ -74,7 +74,7 @@ public class AdminService {
         int result = 0;
         try
         {
-            String updateAdmin = "update admin set admin_name = ?, mobile_no = ? where item_name = '"+admin_emailid+"'";
+            String updateAdmin = "update admin set admin_name = ?, mobile_no = ? where admin_emailid = '"+admin_emailid+"'";
             prepare = con.prepareStatement(updateAdmin);
             prepare.setString(1, admin.getAdmin_name());
             prepare.setLong(2, admin.getMobile_no());
@@ -86,5 +86,19 @@ public class AdminService {
             e.printStackTrace();
         }
         return result;
+    }
+
+    public static List<Admin> searchAdminEmail(Admin admin) throws SQLException {
+        ArrayList <Admin> admin_details = new ArrayList <Admin> ();
+        String admin_emailid = admin.getAdmin_emailid();
+        System.out.println(admin_emailid);
+            stmt = con.createStatement();
+            rs = stmt.executeQuery("Select admin_id, admin_name, admin_emailid, mobile_no from admin where admin_emailid = '"+admin_emailid+"'");
+            while(rs.next())
+            {
+                Admin a = new Admin(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getLong(4));
+                admin_details.add(a);
+            } 
+            return admin_details;
     }
 }

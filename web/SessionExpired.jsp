@@ -9,7 +9,7 @@
 <body>
 	
 	<h2 align = "center">Your Session is expired.....Please Login again</h2>
-	<center><a href = "LoginPage.jsp">Login</a></center>
+	<center><a href = "adminEmpLogin.jsp">Login</a></center>
 	
 </body>
 </html>

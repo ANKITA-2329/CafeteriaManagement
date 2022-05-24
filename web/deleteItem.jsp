@@ -21,7 +21,7 @@
     </head>
     <body>
         <% String message = (String) request.getAttribute("message"); %>
-        <jsp:include page="adminPage.jsp"/>
+        <jsp:include page="adminNav.jsp"/>
         <form name = "delete" id = "search" action ="./SearchItemController" method ="post"><br><br>
         <div class ="container form-outline border">
             <div class = "container form-outline mb-4">

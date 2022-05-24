@@ -57,7 +57,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Change Password</a>
-                            <a class="dropdown-item" href="#">Update Profile</a>
+                            <a class="dropdown-item" href="./SearchAdminController">Update Profile</a>
                             <a class="dropdown-item" href="./LogoutServlet">Logout</a>
                         </div>
                     </li>
