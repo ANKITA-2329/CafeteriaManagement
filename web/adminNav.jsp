@@ -56,7 +56,7 @@
                             Profile Manage
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Change Password</a>
+                            <a class="dropdown-item" href="changePassword.jsp">Change Password</a>
                             <a class="dropdown-item" href="./SearchAdminController">Update Profile</a>
                             <a class="dropdown-item" href="./LogoutServlet">Logout</a>
                         </div>

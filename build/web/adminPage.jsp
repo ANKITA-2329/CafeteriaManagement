@@ -16,56 +16,22 @@
         <title>Admin Page</title>
     </head>
     <body>
-<!--        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="adminPage.jsp">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Employee
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="addEmployee.jsp">Add Employee</a>
-                            <a class="dropdown-item" href="deleteEmployee.jsp">Delete Employee</a>
-                            <a class="dropdown-item" href="updateEmployee.jsp">Update Employee</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Admin
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="addAdmin.jsp">Add Admin</a>
-                            <a class="dropdown-item" href="deleteAdmin.jsp">Delete Admin</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Item
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="addItem.jsp">Add Item</a>
-                            <a class="dropdown-item" href="deleteItem.jsp">Delete Item</a>
-                            <a class="dropdown-item" href="updateItem.jsp">Update Item</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Profile Manage
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Change Password</a>
-                            <a class="dropdown-item" href="#">Update Profile</a>
-                            <a class="dropdown-item" href="adminEmpLogin.jsp">Logout</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>  
-        </nav>-->
+        <% String message = (String) request.getAttribute("message"); %>
         <jsp:include page = "adminNav.jsp"></jsp:include>
+        <form action ="#" method ="get"><br><br>
+            <div class = "container form-outline mb-4">
+                <input type ="date" name ="date" id ="date" class = "form-control">
+            </div>
+        </form>
         <!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>-->
-
+        <%
+            if(message != null)
+            { %>
+                <script type="text/javascript">
+                    var msg = "<%=message%>";
+                    alert(msg);
+                </script>
+                <% }
+        %>
     </body>
 </html>

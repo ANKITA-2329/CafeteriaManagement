@@ -11,10 +11,19 @@ import jakarta.servlet.http.HttpSession;
 public class LogoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession session = request.getSession(false);
-                System.out.println(session.getAttribute("useremail"));
+		if(session != null) {
+			session.removeAttribute("useremail");
+			session.invalidate();
+			request.getRequestDispatcher("adminEmpLogin.jsp").forward(request, response);
+		}
+		
+	}
+        protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		HttpSession session = request.getSession(false);
 		if(session != null) {
 			session.removeAttribute("useremail");
 			session.invalidate();

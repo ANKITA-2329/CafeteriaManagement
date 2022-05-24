@@ -68,6 +68,10 @@
         <servlet-name>AdminEmpLogoutController</servlet-name>
         <servlet-class>com.Rosa.controller.AdminEmpLogoutController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>changePasswordController</servlet-name>
+        <servlet-class>com.Rosa.controller.changePasswordController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
@@ -135,6 +139,10 @@
     <servlet-mapping>
         <servlet-name>AdminEmpLogoutController</servlet-name>
         <url-pattern>/AdminEmpLogoutController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>changePasswordController</servlet-name>
+        <url-pattern>/changePasswordController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

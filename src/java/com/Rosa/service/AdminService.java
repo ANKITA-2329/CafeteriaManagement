@@ -101,4 +101,22 @@ public class AdminService {
             } 
             return admin_details;
     }
+    public static int changePassword(Admin admin)
+    {
+        String admin_emailid = admin.getAdmin_emailid();
+        int result = 0;
+        try
+        {
+            String updateAdmin = "update admin set a_password = ? where admin_emailid = '"+admin_emailid+"'";
+            prepare = con.prepareStatement(updateAdmin);
+            prepare.setString(1, admin.getA_password());
+            result = prepare.executeUpdate();
+        return result;
+        }
+        catch(SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return result;
+    }
 }

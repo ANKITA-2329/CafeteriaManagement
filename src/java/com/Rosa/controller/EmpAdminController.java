@@ -27,6 +27,7 @@ public class EmpAdminController extends HttpServlet {
         {
             HttpSession session = request.getSession();
             session.setAttribute("useremail", email);
+            request.setAttribute("message", "Login successfully");
             dispatcher = request.getRequestDispatcher("adminPage.jsp");
             dispatcher.forward(request, response);
         }
@@ -35,11 +36,13 @@ public class EmpAdminController extends HttpServlet {
         {
             HttpSession session = request.getSession();
             session.setAttribute("useremail", email);
+            request.setAttribute("message", "Login successfully");
             dispatcher = request.getRequestDispatcher("empPage.jsp");
             dispatcher.forward(request, response);
         }
         else
         {
+            request.setAttribute("message", "Invalid credentials, login unsuccessful.");
             dispatcher = request.getRequestDispatcher("adminEmpLogin.jsp");
             dispatcher.forward(request, response);
         }
