@@ -393,4 +393,15 @@ public class OrderService {
 //        return ordertotal;
     return reportMap;
     }
+    public static Order getOrderDetailsCustomer(Customer c)
+    {
+        Order order = new Order();
+        try{
+            stmt = con.createStatement();
+            rs = stmt.executeQuery("");
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return order;
+    }
 }

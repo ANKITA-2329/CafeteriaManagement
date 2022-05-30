@@ -21,10 +21,10 @@
                 <h6>Please enter your login id and password</h6>
             </div>
             <div class = "container form-outline mb-4">
-                Email : <input type = "email" id = "cemail" class = "form-control" name = "email" value = "ankita@gmail.com"placeholder="Enter your email id" required/>
+                Email : <input type = "email" id = "cemail" class = "form-control" name = "email"placeholder="Enter your email id" required/>
             </div>
             <div class = "container form-outline mb-4">
-                Password : <input type = "password" id = "cpassword" class = "form-control" name = "password" value = "Anki9359"placeholder="Enter your password" required/>
+                Password : <input type = "password" id = "cpassword" class = "form-control" name = "password" placeholder="Enter your password" required/>
             </div>
             <div class = "container form-outline mb-4">
                 <div class="form-check">
@@ -35,13 +35,13 @@
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="r1" value = "employee" id="r2">
-                    <label class="form-check-label" for="r1">
+                    <label class="form-check-label" for="r2">
                         Employee
                     </label>
                 </div>
             </div>
             <div class = "container text-center mb-4">
-                <a href = "forget.jsp">Forget Password</a><br>
+                <a href = "AdminEmpEmailId.jsp">Forget Password</a><br>
             </div>
             <div class = "container text-center ">
                 <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>

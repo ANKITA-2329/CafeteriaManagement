@@ -144,6 +144,14 @@
         <servlet-name>YearlyDetailsController</servlet-name>
         <servlet-class>com.Rosa.controller.YearlyDetailsController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ForgetEAPasswordServlet</servlet-name>
+        <servlet-class>com.Rosa.controller.ForgetEAPasswordServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ForgetPasswordServlet</servlet-name>
+        <servlet-class>com.Rosa.controller.ForgetPasswordServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
@@ -287,6 +295,14 @@
     <servlet-mapping>
         <servlet-name>YearlyDetailsController</servlet-name>
         <url-pattern>/YearlyDetailsController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ForgetEAPasswordServlet</servlet-name>
+        <url-pattern>/ForgetEAPasswordServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ForgetPasswordServlet</servlet-name>
+        <url-pattern>/ForgetPasswordServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

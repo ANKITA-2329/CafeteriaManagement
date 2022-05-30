@@ -33,7 +33,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 Password : <input type = "password" id = "cpassword" class = "form-control" name = "password" placeholder="Enter your password" required/>
             </div>
             <div class = "container text-center mb-2">
-                <a href = "forget.jsp">Forget Password</a><br>
+                <a href = "UserEmailId.jsp">Forget Password</a><br>
             </div>
             <div class = "container text-center ">
                 <button type="submit" class="btn btn-primary btn-block mb-2" onclick = "IsEmpty()">Sign in</button>

@@ -21,9 +21,6 @@
                         <a class="nav-link" href="./GetMenuServlet">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cart.jsp">Cart</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="./ManageOrder">Order Status</a>
                     </li>
                     <li class="nav-item dropdown">

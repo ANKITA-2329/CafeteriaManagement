@@ -1,5 +1,6 @@
 package com.Rosa.controller;
 
+import com.Rosa.bean.Customer;
 import com.Rosa.bean.Order;
 import com.Rosa.bean.Payment;
 import com.Rosa.service.OrderService;
@@ -17,15 +18,19 @@ public class ManageCustomerOrderServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        RequestDispatcher dispatcher;
-        Order order [];
-        Payment payment [];
-        order = OrderService.getAllOrderDetails();
-        payment = PaymentService.getAllPaymentDetails();
-        System.out.println(order);
-        System.out.println(payment);
-        dispatcher = request.getRequestDispatcher("orderStatus.jsp");
-        dispatcher.forward(request, response);
+//        String useremail = (String) request.getSession().getAttribute("useremail");	
+//	if(useremail == null) {
+//            System.out.println("Session Expired....please login");
+//            request.getRequestDispatcher("SessionExpired.jsp").forward(request, response);
+//	}  
+//        else
+//        {
+//            Customer c = new Customer();
+//            c.setC_emailid(useremail);
+//            Order order = new Order();
+//            
+//            RequestDispatcher dispatcher;
+//        }
     }
 
     @Override
