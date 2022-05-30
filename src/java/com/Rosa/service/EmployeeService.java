@@ -86,4 +86,53 @@ public class EmployeeService {
         }
         return result;
     }
+    public static int changePassword(Employee emp)
+    {
+        String emp_emailid = emp.getEmp_emailid();
+        int result = 0;
+        try
+        {
+            String updateAdmin = "update employee set e_password = ? where emp_emailid = '"+emp_emailid+"'";
+            prepare = con.prepareStatement(updateAdmin);
+            prepare.setString(1, emp.getPassword());
+            result = prepare.executeUpdate();
+        return result;
+        }
+        catch(SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return result;
+    }
+    public static List<Employee> searchEmployeeEmail(Employee emp) throws SQLException {
+        ArrayList <Employee> emp_details = new ArrayList <Employee> ();
+        String emp_emailid = emp.getEmp_emailid();
+            stmt = con.createStatement();
+            rs = stmt.executeQuery("Select emp_id, emp_name, emp_emailid, workplace, mobile_no from employee where emp_emailid = '"+emp_emailid+"'");
+            while(rs.next())
+            {
+                Employee e = new Employee(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getLong(5));
+                emp_details.add(e);
+            } 
+            return emp_details;
+    }
+    public static int updateEmployeeProfile(Employee emp)
+    {
+        String emp_emailid = emp.getEmp_emailid();
+        int result = 0;
+        try
+        {
+            String updateEmployee = "update employee set emp_name = ?, mobile_no = ? where emp_emailid = '"+emp_emailid+"'";
+            prepare = con.prepareStatement(updateEmployee);
+            prepare.setString(1, emp.getEmp_name());
+            prepare.setLong(2, emp.getMobile_no());
+            result = prepare.executeUpdate();
+        return result;
+        }
+        catch(SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return result;
+    }
 }

@@ -87,4 +87,84 @@ public class ItemService {
         }
         return result;
     }
+    public static List <Item> getItemCoffee()
+    {
+        ArrayList <Item> item_details = new ArrayList <Item> ();
+             
+        try
+        {
+            stmt = con.createStatement();
+            rs = stmt.executeQuery("Select item_name, item_description, price from item where item_category = 'Coffee' and status = 'Available'");
+            while(rs.next())
+            {
+                Item i = new Item(rs.getString(1), rs.getString(2), rs.getInt(3));
+                item_details.add(i);
+            }
+            return item_details;
+        }
+        catch(SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return item_details;
+    }
+    
+    public static List <Item> getItemBurger()
+    {
+        ArrayList <Item> item_details = new ArrayList <Item> ();
+             
+        try
+        {
+            stmt = con.createStatement();
+            rs = stmt.executeQuery("Select item_name, item_description, price from item where item_category = 'Burger' and status = 'Available'");
+            while(rs.next())
+            {
+                Item i = new Item(rs.getString(1), rs.getString(2), rs.getInt(3));
+                item_details.add(i);
+            }
+            return item_details;
+        }
+        catch(SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return item_details;
+    }
+    public static List <Item> getItemSandwich()
+    {
+        ArrayList <Item> item_details = new ArrayList <Item> ();
+             
+        try
+        {
+            stmt = con.createStatement();
+            rs = stmt.executeQuery("Select item_name, item_description, price from item where item_category = 'Sandwich' and status = 'Available'");
+            while(rs.next())
+            {
+                Item i = new Item(rs.getString(1), rs.getString(2), rs.getInt(3));
+                item_details.add(i);
+            }
+            return item_details;
+        }
+        catch(SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return item_details;
+    }
+    public static List <Item> getSelectedItem(String qty[], String item_name[], String item_price[])
+    {
+        ArrayList <Item> selected_item = new ArrayList <Item> ();
+        for(int i = 0 ; i < item_name.length ; i++)
+        {
+            if(!qty[i].equals("0"))
+            {
+                int q = Integer.parseInt(qty[i]);
+                int price = Integer.parseInt(item_price[i]);
+                int total = q * price;
+                Item item = new Item(item_name[i], price, q, total);
+                selected_item.add(item);
+            }
+        }
+        return selected_item;
+    }
 }

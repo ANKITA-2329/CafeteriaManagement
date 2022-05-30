@@ -27,4 +27,24 @@ public class CustRegisterService {
         }
         return result;
     }
+    public static int getC_id(String email)
+    {
+        int result = 0;
+        try
+        {
+            Connection con = DBConnectionUtil.getConnection();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("Select c_id from customer where c_emailid = '"+email+"'");
+            while(rs.next())
+            {
+                result = rs.getInt(1);
+            }
+            return result;
+        }
+        catch(SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return result;
+    }
 }

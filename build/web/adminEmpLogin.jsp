@@ -21,14 +21,14 @@
                 <h6>Please enter your login id and password</h6>
             </div>
             <div class = "container form-outline mb-4">
-                Email : <input type = "email" id = "cemail" class = "form-control" name = "email" placeholder="Enter your email id" required/>
+                Email : <input type = "email" id = "cemail" class = "form-control" name = "email" value = "ankita@gmail.com"placeholder="Enter your email id" required/>
             </div>
             <div class = "container form-outline mb-4">
-                Password : <input type = "password" id = "cpassword" class = "form-control" name = "password" placeholder="Enter your password" required/>
+                Password : <input type = "password" id = "cpassword" class = "form-control" name = "password" value = "Anki9359"placeholder="Enter your password" required/>
             </div>
             <div class = "container form-outline mb-4">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="r1" value = "admin" id="r1" default>
+                    <input class="form-check-input" type="radio" name="r1" value = "admin" id="r1" checked>
                     <label class="form-check-label" for="r1">
                         Admin
                     </label>

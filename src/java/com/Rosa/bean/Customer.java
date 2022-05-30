@@ -13,6 +13,14 @@ public class Customer {
     {
     }
 
+    public Customer(String c_name, String c_emailid, String address, int pin, long mobile_no) {
+        this.c_name = c_name;
+        this.c_emailid = c_emailid;
+        this.address = address;
+        this.pin = pin;
+        this.mobile_no = mobile_no;
+    }
+
     public Customer(String c_name, String c_emailid, String address, int pin, long mobile_no, String c_password) {
         this.c_name = c_name;
         this.c_emailid = c_emailid;
@@ -20,6 +28,15 @@ public class Customer {
         this.pin = pin;
         this.mobile_no = mobile_no;
         this.c_password = c_password;
+    }
+
+    public Customer(int c_id, String c_name, String c_emailid, String address, int pin, long mobile_no) {
+        this.c_id = c_id;
+        this.c_name = c_name;
+        this.c_emailid = c_emailid;
+        this.address = address;
+        this.pin = pin;
+        this.mobile_no = mobile_no;
     }
     
     public int getC_id() {

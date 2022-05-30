@@ -8,6 +8,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/CustLoginController")
 public class CustLoginController extends HttpServlet {
@@ -25,6 +26,9 @@ public class CustLoginController extends HttpServlet {
 //        out.println(result);
         if(result)
         {
+            HttpSession session = request.getSession();
+            session.setAttribute("useremail", user_email);
+            request.setAttribute("message", "Login successfully");
             dispatcher = request.getRequestDispatcher("customerPage.jsp");
             dispatcher.forward(request, response);
         }

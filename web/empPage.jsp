@@ -18,24 +18,21 @@
                         <a class="nav-link active" aria-current="page" href="customerPage.jsp">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="menu.jsp">Menu</a>
+                        <a class="nav-link" href="./GetMenuServlet">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">View Order</a>
+                        <a class="nav-link" href="cart.jsp">Cart</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Cart</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Order Status</a>
+                        <a class="nav-link" href="./ManageOrder">Order Status</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Profile Manage
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="changePassword.jsp">Change Password</a>
-                            <a class="dropdown-item" href="./SearchAdminController">Update Profile</a>
+                            <a class="dropdown-item" href="empChangePassword.jsp">Change Password</a>
+                            <a class="dropdown-item" href="./SearchEmployeeController">Update Profile</a>
                             <a class="dropdown-item" href="./LogoutServlet">Logout</a>
                         </div>
                     </li>

@@ -29,7 +29,7 @@
                 </ul>
             </div>
             <form class="container-fluid justify-content-end">
-                <button class="btn btn-outline-success me-2" type="button" ><a class ="nav-link" href = "login.jsp">Login</a></button>
+                <button class="btn btn-outline-success me-2" type="button" ><a class ="nav-link" href = "login.jsp">Customer Login</a></button>
             </form>
         </nav>
     </body>

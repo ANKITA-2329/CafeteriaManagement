@@ -15,13 +15,6 @@
     <body>
         <% String message = (String) request.getAttribute("message"); %>
         <jsp:include page="adminNav.jsp"/>
-        <div>
-            <nav class="navbar navbar-dark bg-dark">
-                <div class="container-fluid">
-                    <span class="navbar-brand mb-0 h1">Chnage Password</span>
-                </div>
-            </nav>
-        </div>
         <form action = "./changePasswordController" method = "POST"><br><br>
         <div class ="container form-outline border">
         <div class = "container form-outline mb-4">

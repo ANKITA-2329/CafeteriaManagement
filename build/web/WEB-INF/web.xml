@@ -65,12 +65,84 @@
         <servlet-class>com.Rosa.controller.LogoutServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>AdminEmpLogoutController</servlet-name>
-        <servlet-class>com.Rosa.controller.AdminEmpLogoutController</servlet-class>
+        <servlet-name>CustomerLogout</servlet-name>
+        <servlet-class>com.Rosa.controller.CustomerLogout</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>changePasswordController</servlet-name>
         <servlet-class>com.Rosa.controller.changePasswordController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetMenuServlet</servlet-name>
+        <servlet-class>com.Rosa.controller.GetMenuServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EmpChangePassword</servlet-name>
+        <servlet-class>com.Rosa.controller.EmpChangePassword</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateEmployeeProfileController</servlet-name>
+        <servlet-class>com.Rosa.controller.UpdateEmployeeProfileController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MakeOrderServlet</servlet-name>
+        <servlet-class>com.Rosa.controller.MakeOrderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetCustomerDetailsServlet</servlet-name>
+        <servlet-class>com.Rosa.controller.GetCustomerDetailsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PaymentServlet</servlet-name>
+        <servlet-class>com.Rosa.controller.PaymentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ManageOrder</servlet-name>
+        <servlet-class>com.Rosa.controller.ManageOrder</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteOrder</servlet-name>
+        <servlet-class>com.Rosa.controller.DeleteOrder</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminMainController</servlet-name>
+        <servlet-class>com.Rosa.controller.AdminMainController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MontlyDetailsController</servlet-name>
+        <servlet-class>com.Rosa.controller.MontlyDetailsController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetMenuController</servlet-name>
+        <servlet-class>com.Rosa.controller.GetMenuController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MakeCustServlet</servlet-name>
+        <servlet-class>com.Rosa.controller.MakeCustServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CustomerPaymentServlet</servlet-name>
+        <servlet-class>com.Rosa.controller.CustomerPaymentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ManageCustomerOrderServlet</servlet-name>
+        <servlet-class>com.Rosa.controller.ManageCustomerOrderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CustChangePassword</servlet-name>
+        <servlet-class>com.Rosa.controller.CustChangePassword</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CustomerProfileController</servlet-name>
+        <servlet-class>com.Rosa.controller.CustomerProfileController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchCustomerController</servlet-name>
+        <servlet-class>com.Rosa.controller.SearchCustomerController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>YearlyDetailsController</servlet-name>
+        <servlet-class>com.Rosa.controller.YearlyDetailsController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
@@ -137,12 +209,84 @@
         <url-pattern>/LogoutServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>AdminEmpLogoutController</servlet-name>
-        <url-pattern>/AdminEmpLogoutController</url-pattern>
+        <servlet-name>CustomerLogout</servlet-name>
+        <url-pattern>/CustomerLogout</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>changePasswordController</servlet-name>
         <url-pattern>/changePasswordController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetMenuServlet</servlet-name>
+        <url-pattern>/GetMenuServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EmpChangePassword</servlet-name>
+        <url-pattern>/EmpChangePassword</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateEmployeeProfileController</servlet-name>
+        <url-pattern>/UpdateEmployeeProfileController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MakeOrderServlet</servlet-name>
+        <url-pattern>/MakeOrderServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetCustomerDetailsServlet</servlet-name>
+        <url-pattern>/GetCustomerDetailsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PaymentServlet</servlet-name>
+        <url-pattern>/PaymentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManageOrder</servlet-name>
+        <url-pattern>/ManageOrder</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteOrder</servlet-name>
+        <url-pattern>/DeleteOrder</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminMainController</servlet-name>
+        <url-pattern>/AdminMainController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MontlyDetailsController</servlet-name>
+        <url-pattern>/MontlyDetailsController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetMenuController</servlet-name>
+        <url-pattern>/GetMenuController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MakeCustServlet</servlet-name>
+        <url-pattern>/MakeCustServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CustomerPaymentServlet</servlet-name>
+        <url-pattern>/CustomerPaymentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManageCustomerOrderServlet</servlet-name>
+        <url-pattern>/ManageCustomerOrderServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CustChangePassword</servlet-name>
+        <url-pattern>/CustChangePassword</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CustomerProfileController</servlet-name>
+        <url-pattern>/CustomerProfileController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchCustomerController</servlet-name>
+        <url-pattern>/SearchCustomerController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>YearlyDetailsController</servlet-name>
+        <url-pattern>/YearlyDetailsController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

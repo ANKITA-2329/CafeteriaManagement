@@ -52,5 +52,31 @@ public class SearchEmployeeController extends HttpServlet {
             }
         }
     }
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String useremail = (String) request.getSession().getAttribute("useremail");	
+	if(useremail == null) {
+            System.out.println("Session Expired....please login");
+            request.getRequestDispatcher("SessionExpired.jsp").forward(request, response);
+	}
+        else
+        {
+            
+            Employee emp = new Employee();
+            emp.setEmp_emailid(useremail);
+        try{   
+            
+                List <Employee> e = EmployeeService.searchEmployeeEmail(emp);
+                request.setAttribute("result", e);
+            }
+            catch (SQLException ex) {
+                Logger.getLogger(SearchAdminController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                //request.setAttribute("message", "Record found successfully.");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("updateProfileDetailsEmp.jsp");
+                dispatcher.forward(request, response);
+        }
+    }
 
 }

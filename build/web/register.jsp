@@ -38,7 +38,7 @@
 
     </head>
     <body>
-        <jsp:include page="index.html" />
+        <jsp:include page="mainNav.jsp" />
         <form method = "POST" action = "/Rosa/CustomerRegisterController" onsubmit ="return verifyPassword()"><br><br>
             <div class ="container form-outline border">
             <div class = "container form-outline mb-4">

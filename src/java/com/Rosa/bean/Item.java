@@ -6,6 +6,15 @@ public class Item {
     private String item_category;
     private String item_description;
     private int price;
+    private int qty;
+    private int total;
+
+    public Item(String item_name, int price, int qty, int total) {
+        this.item_name = item_name;
+        this.price = price;
+        this.qty = qty;
+        this.total = total;
+    }
     private String status;
     
     public Item()
@@ -28,6 +37,21 @@ public class Item {
         this.price = price;
         this.status = status;
     }
+
+    public Item(String item_name, String item_category, String item_description, int price) {
+        this.item_name = item_name;
+        this.item_category = item_category;
+        this.item_description = item_description;
+        this.price = price;
+    }
+
+    public Item(String item_name, String item_description, int price) {
+        this.item_name = item_name;
+        this.item_description = item_description;
+        this.price = price;
+    }
+
+    
 
     public int getItem_id() {
         return item_id;
@@ -75,6 +99,22 @@ public class Item {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public int getQty() {
+        return qty;
+    }
+
+    public void setQty(int qty) {
+        this.qty = qty;
+    }
+
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
     }
     
 }

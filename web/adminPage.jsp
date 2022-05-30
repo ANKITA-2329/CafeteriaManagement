@@ -3,7 +3,7 @@
     Created on : 2022 May 5, 11:54:56
     Author     : Dell
 --%>
-
+<%@page import = "java.util.*" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,14 +16,39 @@
         <title>Admin Page</title>
     </head>
     <body>
-        <% String message = (String) request.getAttribute("message"); %>
+        <% String message = (String) request.getAttribute("message"); 
+            String date = (String) request.getAttribute("date");
+        %>
         <jsp:include page = "adminNav.jsp"></jsp:include>
-        <form action ="#" method ="get"><br><br>
+        <form action ="./AdminMainController" method ="Get"><br><br>
+
             <div class = "container form-outline mb-4">
                 <input type ="date" name ="date" id ="date" class = "form-control">
             </div>
+            <div class = "container text-center ">
+                <button type="submit" class="btn btn-primary btn-block mb-2">Get Details</button>
+            </div>
         </form>
-        <!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>-->
+        <div class = "container form-outline border mb-4">
+        <% 
+            %>Date : <%=date%><br><%
+            Map<String, Object> reportMap = (LinkedHashMap) request.getAttribute("reportMap");
+            if(reportMap != null)
+            {
+            for(Map.Entry<String, Object> entry: reportMap.entrySet()) {
+        %>
+        <p><%=entry.getKey()%>: <%=entry.getValue() %></p>    
+        <%
+            }
+}
+        %>
+        </div>
+        <form method = "Post">
+        <div class = "container text-center ">
+            <button type="submit" formaction = "./MontlyDetailsController"class="btn btn-primary btn-block mb-2">Monthly Details</button>
+            <button type="submit" formaction = "./YearlyDetailsController"class="btn btn-primary btn-block mb-2">Yearly Details</button>
+        </div>
+        </form>
         <%
             if(message != null)
             { %>
