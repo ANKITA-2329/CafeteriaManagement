@@ -130,28 +130,57 @@ public class PaymentService {
         }
         return result;
     }
-    public static Payment[] getAllPaymentDetails()
+    public static List <Payment> getAllPaymentDetails()
     {
-        Payment [] pay = null;
+        List <Payment> payment = new ArrayList <Payment> ();
         try{
             stmt = con.createStatement();
-            rs = stmt.executeQuery("Select order_id from order where order_status != 'Completed' and order_status != ''");
+            rs = stmt.executeQuery("Select order_id from orders where order_status != 'Completed' and order_status != ''");
             while(rs.next())
             {
-                prepare = con.prepareStatement("Select order_id, payment_mode, payment_amount, payment_id from orders where order_id = '"+rs.getInt(1)+"'");
+                prepare = con.prepareStatement("Select order_id, payment_mode, payment_amount, payment_id from payment where order_id = '"+rs.getInt(1)+"'");
                 rs1 = prepare.executeQuery();
             }
             int i = 0;
             while(rs1.next())
             {
-                pay[i] = new Payment(rs1.getInt(1), rs1.getString(2), rs1.getDouble(3), rs1.getInt(4));
+                Payment pay = new Payment(rs1.getInt(1), rs1.getString(2), rs1.getDouble(3), rs1.getInt(4));
+                payment.add(pay);
             }
-            System.out.println(pay);
-            return pay;
+            System.out.println(payment);
+            return payment;
             
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-        return pay;
+        return payment;
+    }
+    public static int deleteOrderId(int payment_id)
+    {
+        System.out.println(payment_id);
+        int result = 0;
+        try
+        {
+            int order_id = 0;
+            stmt = con.createStatement();
+            rs = stmt.executeQuery("Select payment_id from payment where order_id = '"+payment_id+"'");
+            while(rs.next())
+            {
+                order_id = rs.getInt(1);
+            }
+            System.out.println(order_id);
+            prepare = con.prepareStatement("Delete from payment where payment_id = '"+order_id+"'");
+            result = prepare.executeUpdate();
+            System.out.println(result);
+            prepare = con.prepareStatement("Update orders set order_status = 'delete' where order_id = '"+payment_id+"'");
+            result = prepare.executeUpdate();
+            System.out.println(result);
+            return result;
+        }
+        catch(SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return result;
     }
 }

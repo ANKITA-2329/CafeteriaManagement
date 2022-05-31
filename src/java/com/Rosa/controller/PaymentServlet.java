@@ -23,6 +23,13 @@ public class PaymentServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String useremail = (String) request.getSession().getAttribute("useremail");	
+	if(useremail == null) {
+            System.out.println("Session Expired....please login");
+            request.getRequestDispatcher("SessionExpired.jsp").forward(request, response);
+	}
+        else
+        {
         RequestDispatcher dispatcher;
         int order_id = Integer.parseInt(request.getParameter("order_id"));
         System.out.println(order_id);
@@ -45,7 +52,12 @@ public class PaymentServlet extends HttpServlet {
             dispatcher = request.getRequestDispatcher("orderStatus.jsp");
             dispatcher.forward(request, response);
         }
-        
+        else
+        {
+            dispatcher = request.getRequestDispatcher("payment.jsp");
+            dispatcher.forward(request, response);
+        }
+        }
         
     }
 

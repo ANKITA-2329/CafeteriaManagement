@@ -57,14 +57,14 @@ public class ManageCustomerOrderServlet extends HttpServlet {
         if(result == 1 && action.equals("Delete") && !order_status.equals("Completed") || !order_status.equals("Prepared"))
         {
             request.setAttribute("message", "Order deleted successfully");
-            dispatcher = request.getRequestDispatcher("orderStatus.jsp");
+            dispatcher = request.getRequestDispatcher("CustOrderStatus.jsp");
             dispatcher.forward(request, response);
         }
 
         else
         {
             request.setAttribute("message", "Order completed or prepared so no deletion of order");
-            dispatcher = request.getRequestDispatcher("orderStatus.jsp");
+            dispatcher = request.getRequestDispatcher("CustOrderStatus.jsp");
             dispatcher.forward(request, response);
         }
         }

@@ -43,7 +43,7 @@ public class CustChangePassword extends HttpServlet {
             else
             {
                 request.setAttribute("message", "Password not changed.");
-                RequestDispatcher dispatcher = request.getRequestDispatcher("changePassword.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("changeCustomerPassword.jsp");
                 dispatcher.forward(request, response);
             }
         }

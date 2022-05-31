@@ -21,7 +21,7 @@
                         <a class="nav-link" href="./GetMenuServlet">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./ManageOrder">Order Status</a>
+                        <a class="nav-link" href="./OrderServlet">Order Status</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

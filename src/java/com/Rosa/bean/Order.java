@@ -15,6 +15,15 @@ public class Order {
     private String order_type;
     private String order_status;
 
+    public Order(int order_id, String order_status) {
+        this.order_id = order_id;
+        this.order_status = order_status;
+    }
+
+    public Order(int order_id) {
+        this.order_id = order_id;
+    }
+
     public Order(String order_details, int subTotal, double gst, double cgst, double grandTotal, Date date, int emp_id, String order_type) {
         this.order_details = order_details;
         this.subTotal = subTotal;

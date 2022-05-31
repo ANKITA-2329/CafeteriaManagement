@@ -134,32 +134,7 @@ public class OrderService {
         }
         return order;
     }
-    public static Order[] getAllOrderDetails()
-    {
-        Order [] order = null;
-        try{
-            stmt = con.createStatement();
-            rs = stmt.executeQuery("Select order_id from payment where payment_status = 'Confirm'");
-            System.out.println(rs.next());
-            while(rs.next())
-            {
-                //stmt = con.createStatemnt();
-                rs1 = stmt.executeQuery("Select order_id, order_details, order_status, order_type, date from orders where order_id = '"+rs.getInt(1)+"'");
-                //rs1 = prepare.executeQuery();
-            }
-            int i = 0;
-            System.out.println(rs1.next());
-            while(rs1.next())
-            {
-                order[i] = new Order(rs1.getInt(1), rs1.getString(2), rs1.getString(3), rs1.getString(4), rs1.getDate(5));
-            }
-            System.out.println(order);
-            return order;
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-        return order;
-    }
+    
     public static Map<String, Object> getOrderTotal(String date)
     {
         int total = 0;
@@ -399,6 +374,63 @@ public class OrderService {
         try{
             stmt = con.createStatement();
             rs = stmt.executeQuery("");
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return order;
+    }
+    public static List <Order> getAllOrderDetails()
+    {
+        List <Order> order = new ArrayList<Order> ();
+        try{
+            stmt = con.createStatement();
+            rs = stmt.executeQuery("Select order_id, order_status from orders where order_status != 'Completed' and order_status != '' and order_status != 'delete' and date = current_date");
+            while(rs.next())
+            {
+                Order o = new Order(rs.getInt(1), rs.getString(2));
+                order.add(o);
+            }
+            return order;
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return order;
+    }
+    public static int updateStatus(int order_id, String status)
+    {
+        int result = 0;
+        try
+        {
+        prepare = con.prepareStatement("Update orders set order_status = '"+status+"' where order_id = '"+order_id+"' and order"
+                    + "_status != 'Completed'");
+            result = prepare.executeUpdate();
+            return result;
+        }
+        catch(SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+    public static List <Order> getCustomerOrderDetails(String email)
+    {
+        List <Order> order = new ArrayList<Order> ();
+        int id = 0;
+        try{
+            stmt = con.createStatement();
+            rs = stmt.executeQuery("Select c_id from customer where c_emailid = '"+email+"'");
+            while(rs.next())
+            {
+                id = rs.getInt(1);
+            }
+            System.out.println(id);
+            rs = stmt.executeQuery("Select order_id, order_status from orders where order_status != 'Completed' and order_status != '' and order_status != 'delete' and date = current_date and c_id = '"+id+"'");
+            while(rs.next())
+            {
+                Order o = new Order(rs.getInt(1), rs.getString(2));
+                order.add(o);
+            }
+            return order;
         } catch (SQLException ex) {
             ex.printStackTrace();
         }

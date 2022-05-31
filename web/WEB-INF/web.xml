@@ -152,6 +152,14 @@
         <servlet-name>ForgetPasswordServlet</servlet-name>
         <servlet-class>com.Rosa.controller.ForgetPasswordServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>com.Rosa.controller.OrderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CustomerOrderServlet</servlet-name>
+        <servlet-class>com.Rosa.controller.CustomerOrderServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
@@ -303,6 +311,14 @@
     <servlet-mapping>
         <servlet-name>ForgetPasswordServlet</servlet-name>
         <url-pattern>/ForgetPasswordServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderServlet</servlet-name>
+        <url-pattern>/OrderServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CustomerOrderServlet</servlet-name>
+        <url-pattern>/CustomerOrderServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

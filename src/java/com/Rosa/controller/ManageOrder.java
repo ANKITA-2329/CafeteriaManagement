@@ -17,15 +17,7 @@ public class ManageOrder extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        RequestDispatcher dispatcher;
-        Order order [];
-        Payment payment [];
-        order = OrderService.getAllOrderDetails();
-        payment = PaymentService.getAllPaymentDetails();
-        System.out.println(order);
-        System.out.println(payment);
-        dispatcher = request.getRequestDispatcher("orderStatus.jsp");
-        dispatcher.forward(request, response);
+        
     }
 
     @Override

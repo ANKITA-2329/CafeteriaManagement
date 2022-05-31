@@ -3,68 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/AddItemController.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/DeleteAdminServlet.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/MakeOrderServlet.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/LogoutServlet.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/upiPaymentDetails.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/deleteEmployee.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/updateAdmin.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/addAdmin.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/SessionExpired.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/adminEmpLogin.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/service/AdminService.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/AddEmployeeController.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/viewMenu.jsp</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/OrderServlet.java</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/bean/Item.java</file>
             <file>file:/E:/Final%20Year%20Project/Rosa/web/adminPage.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/service/EmployeeService.java</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/web/demoCustStatus.jsp</file>
             <file>file:/E:/Final%20Year%20Project/Rosa/web/adminNav.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/GetCustomerDetailsServlet.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/cart.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/DeleteOrder.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/SearchItemController.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/updateProfileDetailsEmp.jsp</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/web/orderStatus.jsp</file>
             <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/service/OrderService.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/updateEmployee.jsp</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/web/adminEmpLogin.jsp</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/web/demoStatus.jsp</file>
             <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/ManageOrder.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/deleteAdmin.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/UpdateAdminController.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/service/ItemService.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/payment.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/menu1.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/addEmployee.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/DeleteItemServlet.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/AddAdminController.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/AdminEmpLogoutController.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/menu.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/PaymentServlet.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/changePasswordController.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/UpdateItemServlet.java</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/service/EmpAdminService.java</file>
             <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/SearchAdminController.java</file>
             <file>file:/E:/Final%20Year%20Project/Rosa/web/customerPage.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/deleteItem.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/DeleteEmployeeController.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/mainNav.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/bean/Payment.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/GetMenuServlet.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/bean/Employee.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/EmpAdminController.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/UpdateEmployeeProfileController.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/bean/Item.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/UpdateEmployeeController.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/EmpChangePassword.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/CustomerDetails.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/addItem.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/empChangePassword.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/orderStatus.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/updateItem.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/empPage.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/bean/Order.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/SearchEmployeeController.java</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/service/EmpAdminService.java</file>
             <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/service/PaymentService.java</file>
             <file>file:/E:/Final%20Year%20Project/Rosa/web/login.jsp</file>
-            <file>file:/E:/Final%20Year%20Project/Rosa/web/changePassword.jsp</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/CustomerOrderServlet.java</file>
+            <file>file:/E:/Final%20Year%20Project/Rosa/src/java/com/Rosa/controller/EmpAdminController.java</file>
         </group>
     </open-files>
 </project-private>
