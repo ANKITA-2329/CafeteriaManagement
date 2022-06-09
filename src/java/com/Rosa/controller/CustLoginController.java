@@ -34,6 +34,7 @@ public class CustLoginController extends HttpServlet {
         }
         else
         {
+            request.setAttribute("message", "Login unsuccessfully");
             dispatcher = request.getRequestDispatcher("login.jsp");
             dispatcher.forward(request, response);
         }

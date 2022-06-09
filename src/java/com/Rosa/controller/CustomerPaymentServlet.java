@@ -45,7 +45,12 @@ public class CustomerPaymentServlet extends HttpServlet {
             dispatcher = request.getRequestDispatcher("CustOrderStatus.jsp");
             dispatcher.forward(request, response);
         }
-        
+        else
+        {
+            request.setAttribute("order", order_id);
+            dispatcher = request.getRequestDispatcher("customerPayment.jsp");
+            dispatcher.forward(request, response);
+        }
         
     }
 

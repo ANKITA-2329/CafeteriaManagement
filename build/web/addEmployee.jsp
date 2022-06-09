@@ -43,7 +43,7 @@
                 Password : <input type = "password" id = "password" class = "form-control" name = "epassword" placeholder = "Enter password" required/>
             </div>
             <div class = "container text-center ">
-                <button type="submit" class="btn btn-primary btn-block mb-2" >Add Delete</button>
+                <button type="submit" class="btn btn-primary btn-block mb-2" >Add Employee</button>
             </div>
         </div>
         </form><br><br>

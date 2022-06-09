@@ -26,7 +26,7 @@
         <form action ="./SearchEmployeeController" method ="post"><br><br>
         <div class ="container form-outline border">
             <div class = "container form-outline mb-4">
-                <h1>Search Item</h1>
+                <h1>Search Employee</h1>
             </div>
             <input type = "hidden" name = "action" value = "update">
             <div class = "container form-outline mb-4">
@@ -46,7 +46,7 @@
         <form action ="./UpdateEmployeeController" method ="post"><br>
             <div class ="container form-outline border"><br>
             <div class = "container form-outline mb-4">
-                <h1>Update Item</h1>
+                <h1>Update Employee</h1>
             </div>
                 <!--<input type = "hidden" name = "action" value = "update">-->
             <table style="margin-left:auto; margin-right:auto;" class="table table-striped">

@@ -14,7 +14,7 @@
     <body>
         <jsp:include page="customerPage.jsp"/>
         <form action ="./CustomerPaymentServlet" method ="Post"><br>
-            <input type ="hidden" name="order_id" value ="${order_id}">
+            <input type ="text" name="order_id" value ="${order_id}">
             <div class ="container form-outline border">
                 <div class = "container form-outline mb-4">
                     <h1>Payment Mode</h1>

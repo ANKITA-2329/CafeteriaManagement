@@ -14,26 +14,26 @@
     <body>
         <jsp:include page="empPage.jsp"/>
         <form action ="./PaymentServlet" method ="Post"><br>
-            <input type ="hidden" name="order_id" value ="${order_id}">
+            <input type ="type" name="order_id" value ="${order_id}">
             <div class ="container form-outline border">
                 <div class = "container form-outline mb-4">
                     <h1>Payment Mode</h1>
                 </div>
                 <div class = "container form-outline mb-4">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="r1" value = "Cash Payment" id="r1" default>
+                        <input class="form-check-input" type="radio" name="r1" value = "Cash Payment" id="r1">
                         <label class="form-check-label" for="r1">
                             Cash Payment
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="r1" value = "Debit/Credit Payment" id="r2" onclick = "text(1)">
+                        <input class="form-check-input" type="radio" name="r1" value = "Debit/Credit Payment" id="r2">
                         <label class="form-check-label" for="r2">
                             Debit/Credit Payment
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="r1" value = "UPI ID" id="r3" onclick = "text(2)">
+                        <input class="form-check-input" type="radio" name="r1" value = "UPI ID" id="r3">
                         <label class="form-check-label" for="r3">
                             UPI ID
                         </label>

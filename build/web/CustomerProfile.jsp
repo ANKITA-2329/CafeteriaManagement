@@ -5,7 +5,7 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Update Delete</title>
+        <title>Update Customer</title>
     <style type = "text/css">
             table, th, td{
                 border: 1px solid black;
@@ -53,7 +53,7 @@
                             <td><input name = address value = "<%=c.getAddress()%>"></td>
                         </tr>
                         <tr>
-                            <td>Customer address</td>
+                            <td>Customer Pin</td>
                             <td><input name = pin value = "<%=c.getPin()%>"></td>
                         </tr>
                         <tr>
